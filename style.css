@@ -1,235 +1,99 @@
-/* --- CSS Variables & Reset --- */
-:root {
-    /* Theme Colors based on Angler Atlas concept */
-    --primary-blue: #002f4b; /* Deep Navy */
-    --secondary-blue: #00578a; /* Brighter Blue */
-    --accent-copper: #c76c3a; /* Copper/Orange accent */
-    --bg-light: #f4f7f6; /* Light gray background */
-    --text-dark: #333;
-    --white: #ffffff;
-    --border-color: #ddd;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-}
-
-/* --- Navigation Bar --- */
-.top-nav {
+/* --- LOGIN PAGE STYLES (Add to bottom of style.css) --- */
+.login-body {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white);
-    padding: 0.8rem 2rem;
-    border-bottom: 2px solid var(--primary-blue);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.branding {
-    color: var(--primary-blue);
-    font-weight: 800;
-    font-size: 1.5rem;
-}
-
-.search-bar-container {
-    display: flex;
-    align-items: center;
-    background-color: var(--bg-light);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    width: 40%;
-}
-
-.search-input {
-    border: none;
-    background: transparent;
-    outline: none;
-    margin-left: 10px;
-    width: 100%;
-}
-
-.nav-right .nav-item {
-    text-decoration: none;
-    color: var(--text-dark);
-    margin-left: 2rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-right .nav-item.active {
-    color: var(--primary-blue);
-    border-bottom: 2px solid var(--primary-blue);
-}
-
-/* --- Main Grid Layout --- */
-.main-container {
-    display: grid;
-    /* The 3-column layout defined in the wireframe */
-    grid-template-columns: 250px 1fr 300px;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-
-/* --- General Widget Styling --- */
-.widget {
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.widget h3 {
-    color: var(--primary-blue);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-/* --- Left Sidebar Content --- */
-.rank-box {
-    font-size: 1.1rem;
-}
-
-.weather-data {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.weather-data .temp {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-blue);
-}
-
-/* --- Center Feed Content --- */
-.activity-feed h2 {
-    margin-bottom: 1rem;
-    color: var(--primary-blue);
-}
-
-.post-card {
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    background-color: var(--secondary-blue);
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.username {
-    font-weight: bold;
-}
-
-.post-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.post-data {
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.9rem;
-}
-
-.post-actions {
-    display: flex;
-    padding: 0.5rem 1rem;
-}
-
-.action-btn {
-    background: none;
-    border: none;
-    flex: 1;
-    padding: 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 8px;
-    color: var(--text-dark);
-    transition: background-color 0.2s;
+    align-items: center;
 }
 
-.action-btn:hover {
-    background-color: var(--bg-light);
-    color: var(--primary-blue);
-}
-
-/* --- Right Sidebar Content --- */
-.leaderboard-list {
-    padding-left: 1.5rem;
-    line-height: 1.8;
-}
-
-.ad-placeholder img {
+.login-container {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     width: 100%;
-    border-radius: 4px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-header .logo-icon {
+    font-size: 3rem;
+    color: var(--accent-copper);
     margin-bottom: 1rem;
 }
 
-.purchase-btn {
+.login-header h1 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-group input {
     width: 100%;
-    padding: 0.8rem;
-    background-color: var(--accent-copper);
-    color: var(--white);
+    padding: 12px 12px 12px 40px; /* Space for icon */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue);
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-blue);
+}
+
+.divider {
+    margin: 1.5rem 0;
+    color: #888;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 1rem;
 }
 
-.purchase-btn:hover {
-    background-color: #b35a2e;
+/* --- INTERACTIVE STATES --- */
+.action-btn.liked {
+    color: #e74c3c; /* Red color when liked */
+    font-weight: bold;
 }
 
-/* --- Responsive Design (Mobile fallback) --- */
-@media (max-width: 992px) {
-    .main-container {
-        /* Stack columns vertically on smaller screens */
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar-left, .sidebar-right {
-        order: 2; /* Move sidebars below feed on mobile */
-    }
-    .activity-feed {
-        order: 1;
-    }
-    
-    .search-bar-container {
-        display: none; /* Hide search on small mobile for simplicity */
-    }
+.action-btn.liked i {
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    50% { transform: scale(1.4); }
 }
