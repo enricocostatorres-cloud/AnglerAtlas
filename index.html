@@ -3,99 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angler Atlas - Share the Catch. Keep the Spot.</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Login Page</title>
 </head>
 <body>
-
-    <header class="top-nav">
-        <div class="nav-left">
-            <h1 class="branding">ANGLER ATLAS</h1>
-        </div>
-        <div class="search-bar-container">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" placeholder="Search catches, species..." class="search-input">
-        </div>
-        <nav class="nav-right">
-            <a href="#" class="nav-item"><i class="fa-solid fa-map"></i> Map</a>
-            <a href="#" class="nav-item active"><i class="fa-solid fa-newspaper"></i> Feed</a>
-            <a href="#" class="nav-item"><i class="fa-solid fa-user"></i> Profile</a>
-        </nav>
-    </header>
-
-    <div class="main-container">
-
-        <aside class="sidebar-left">
-            <div class="widget dashboard-widget">
-                <h3>User Dashboard</h3>
-                <div class="rank-box">
-                    Current Rank: <strong>Master Angler</strong>
-                </div>
-            </div>
-            <div class="widget weather-widget">
-                <h3>Weather Widget</h3>
-                <div class="weather-data">
-                    <span class="temp">72°F</span>
-                    <span class="condition"><i class="fa-solid fa-cloud-sun"></i> Partly Cloudy</span>
-                    <span class="wind">Wind: NE 5mph</span>
-                </div>
-            </div>
-        </aside>
-
-        <main class="activity-feed">
-            <h2>Activity Feed</h2>
-            
-            <article class="post-card">
-                <div class="post-header">
-                    <div class="user-avatar"></div> <span class="username">FishingPro_Mike</span>
-                </div>
-                
-                <div class="post-image-container">
-                    <img src="https://placehold.co/600x400/002f4b/ffffff?text=Catch+Photo+Placeholder" alt="Catch Photo" class="post-image">
-                </div>
-                
-                <div class="post-data">
-                    <strong>Catch Data:</strong> Largemouth Bass | Depth: 12ft | Lure: Crankbait
-                </div>
-                
-                <div class="post-actions">
-                    <button class="action-btn like-btn">
-                        <i class="fa-solid fa-fish"></i> Like
-                    </button>
-                    <button class="action-btn share-btn">
-                        <i class="fa-solid fa-anchor"></i> Share
-                    </button>
-                    <button class="action-btn comment-btn">
-                        <i class="fa-regular fa-comment"></i> Comment
-                    </button>
-                </div>
-            </article>
-            </main>
-
-        <aside class="sidebar-right">
-            <div class="widget leaderboard-widget">
-                <h3>Live Leaderboard</h3>
-                <ol class="leaderboard-list">
-                    <li>User A - 15,400 pts</li>
-                    <li>User B - 14,200 pts</li>
-                    <li>User C - 12,850 pts</li>
-                    <li>User D - 11,000 pts</li>
-                </ol>
-            </div>
-            <div class="widget gear-spotlight-widget">
-                <h3>Gear Spotlight</h3>
-                <div class="ad-placeholder">
-                     <img src="https://placehold.co/300x200/c76c3a/ffffff?text=Advertisement+Placeholder" alt="Gear Ad">
-                </div>
-                <p>Lure used in post: <strong>Deep Diver Crankbait</strong></p>
-                <button class="purchase-btn">View Details & Purchase</button>
-            </div>
-        </aside>
-
-    </div>
-<script src="script.js"></script>
-</body>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p> Forgot your password? <a href="/reset-password">Reset it here</a>.</p>
 </body>
 </html>
-
