@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angler Atlas - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="nav-left">
+            <h1 class="branding">ANGLER ATLAS</h1>
+        </div>
+        <div class="search-bar-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search catches..." class="search-input">
+        </div>
+        <nav class="nav-right">
+            <a href="#" class="nav-item"><i class="fa-solid fa-map"></i> Map</a>
+            <a href="#" class="nav-item active"><i class="fa-solid fa-newspaper"></i> Feed</a>
+            <a href="#" class="nav-item"><i class="fa-solid fa-user"></i> Profile</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left">
+            <div class="widget dashboard-widget">
+                <h3>User Dashboard</h3>
+                <div class="rank-box">Rank: <strong>Master Angler</strong></div>
+            </div>
+            <div class="widget weather-widget">
+                <h3>Weather</h3>
+                <div class="weather-data">
+                    <span class="temp">72°F</span>
+                    <span class="condition"><i class="fa-solid fa-cloud-sun"></i> Partly Cloudy</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="activity-feed">
+            <div class="feed-header">
+                <h2>Activity Feed</h2>
+                <button id="openPostModalBtn" class="btn-primary">
+                    <i class="fa-solid fa-plus"></i> Log Catch
+                </button>
+            </div>
+            
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="user-avatar"></div>
+                    <span class="username">FishingPro_Mike</span>
+                </div>
+                <div class="post-image-container">
+                    <img src="https://placehold.co/600x400/002f4b/ffffff?text=Bass+Catch" alt="Catch" class="post-image">
+                </div>
+                <div class="post-data">
+                    <strong>Catch:</strong> Largemouth Bass | <strong>Depth:</strong> 12ft
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn like-btn"><i class="fa-solid fa-fish"></i> Like</button>
+                    <button class="action-btn share-btn"><i class="fa-solid fa-anchor"></i> Share</button>
+                    <button class="action-btn comment-btn"><i class="fa-regular fa-comment"></i> Comment</button>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="widget leaderboard-widget">
+                <h3>Leaderboard</h3>
+                <ol class="leaderboard-list">
+                    <li>User A - 15,400 pts</li>
+                    <li>User B - 14,200 pts</li>
+                    <li>User C - 12,850 pts</li>
+                </ol>
+            </div>
+            <div class="widget gear-spotlight-widget">
+                <h3>Gear Spotlight</h3>
+                <p>Lure: <strong>Deep Diver</strong></p>
+                <button class="purchase-btn">Buy Now</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Log a New Catch</h2>
+            <form id="createPostForm">
+                <input type="text" id="speciesInput" placeholder="Species (e.g. Bass)" required>
+                <input type="text" id="depthInput" placeholder="Depth (e.g. 15ft)" required>
+                <input type="text" id="lureInput" placeholder="Lure Used (e.g. Worm)" required>
+                <button type="submit" class="btn-submit">Post Catch</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
